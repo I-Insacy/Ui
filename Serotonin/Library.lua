@@ -648,19 +648,13 @@ local CustomFont = { } do
         end
     end
 
-    CustomFont:New("Verdana", 400, "Regular", {
-        Id = "Verdana",
-        Url = "https://github.com/mainstreamed/clones/raw/refs/heads/main/bred/verdana.ttf"
-    })
-
-    CustomFont:New("SmallestPixel", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/smallest_pixel-7.ttf"})
-    CustomFont:New("ProggyClean", 400, "Regular", {Url = "https://github.com/mainstreamed/clones/raw/refs/heads/main/bred/proggy-clean.ttf"})
-    CustomFont:New("TahomaXP", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/windows-xp-tahoma.ttf"})
-    CustomFont:New("MinecraftiaRegular", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/minecraftia-regular.ttf"})
-    CustomFont:New("Monaco", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/Monaco.ttf"})
-    CustomFont:New("Verdana", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/verdana.ttf"})
-    CustomFont:New("TeachersPet", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/teachers-pet.ttf"})
---  CustomFont:New("FSTahoma", 400, "Regular", {Url = "https://raw.githubusercontent.com/setrawmetatable/Ui/refs/heads/main/Font/fs-tahoma-8px.ttf"})
+    CustomFont:New("SmallestPixel", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Smallest_pixel-7.ttf"})
+    CustomFont:New("ProggyClean", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Proggy-clean.ttf"})
+    CustomFont:New("TahomaXP", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Windows-xp-tahoma.ttf"})
+    CustomFont:New("MinecraftiaRegular", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Minecraftia-regular.ttf"})
+    CustomFont:New("Monaco", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Monaco.ttf"})
+    CustomFont:New("Verdana", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Verdana.ttf"})
+    CustomFont:New("TeachersPet", 400, "Regular", {Url = "https://github.com/I-Insacy/Ui/raw/refs/heads/main/Font/Teachers-pet.ttf"})
 
     Library.Fonts["Smallest Pixel"] = CustomFont:Get("SmallestPixel")
     Library.Fonts["Proggy Clean"] = CustomFont:Get("ProggyClean")
@@ -669,7 +663,6 @@ local CustomFont = { } do
     Library.Fonts["Monaco"] = CustomFont:Get("Monaco")
     Library.Fonts["Verdana"] = CustomFont:Get("Verdana")
     Library.Fonts["Teachers Pet"] = CustomFont:Get("TeachersPet")
---  Library.Fonts['FSTahoma'] = CustomFont:Get("FSTahoma")
     Library.Fonts['Gotham SSm'] = Font.new('rbxasset://fonts/families/GothamSSm.json', Enum.FontWeight.ExtraBold)
 
     Library.Font = CustomFont:Get("Verdana")
