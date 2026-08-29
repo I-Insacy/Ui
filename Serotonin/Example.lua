@@ -15,12 +15,12 @@ local MiscPage = Window:Page({Name = 'Misc', Columns = 2})
 
 local SettingsPage = Library:CreateSettingsPage(Window, KeybindList, Watermark)
 
-local AimbotSection = CombatPage:Section({
+local AimSection = CombatPage:Section({
     Name = "Aim",
     Side = 1
 })
 
-AimbotSection:Toggle({
+AimSection:Toggle({
     Name = "Enabled",
     Flag = "Aim",
     Default = false,
@@ -29,7 +29,7 @@ AimbotSection:Toggle({
     end
 })
 
-AimbotSection:Slider({
+AimSection:Slider({
     Name = "Fov",
     Flag = "AimFov",
     Min = 70,
@@ -40,7 +40,7 @@ AimbotSection:Slider({
     end
 })
 
-AimbotSection:Dropdown({
+AimSection:Dropdown({
     Name = "Part",
     Flag = "AimPart",
     Default = "Head",
@@ -50,21 +50,19 @@ AimbotSection:Dropdown({
     end
 })
 
-local VisualsSection = VisualsPage:Section({
+local EspSection = VisualsPage:Section({
     Name = "Esp",
     Side = 1
 })
 
-local ToggleBox = VisualsSection:Toggle({
+EspSection:Toggle({
     Name = "Box",
     Flag = "Box",
     Default = false,
     Callback = function(Value)
       print(Value)
     end
-})
-
-ToggleBox:Colorpicker({
+}):Colorpicker({
     Name = "Color",
     Flag = "BoxColor",
     Default = Color3.fromRGB(255, 255, 255),
