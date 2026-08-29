@@ -28,7 +28,6 @@ local Library do
 			      Sounds = "Nigalose/Sounds",
         },
 
-        -- Ignore below
         Pages = { },
         Sections = { },
 
@@ -196,14 +195,12 @@ local Themes = {
 
 Library.Theme = TableClone(Themes["Preset"])
 
--- Folders
 for Index, Value in Library.Folders do 
     if not isfolder(Value) then
         makefolder(Value)
     end
 end
 
--- Tweening
 local Tween = { } do
     Tween.__index = Tween
 
@@ -297,7 +294,6 @@ local Tween = { } do
     end
 end
 
--- Instances
 Instances = { } do
     Instances.__index = Instances
 
@@ -524,7 +520,6 @@ Instances = { } do
 
             StartMouse = UserInputService:GetMouseLocation()
 
-            -- store offsets, not absolute screen pos
             StartPosition = Vector2New(Gui.Position.X.Offset, Gui.Position.Y.Offset)
             StartSize = Vector2New(Gui.Size.X.Offset, Gui.Size.Y.Offset)
             
@@ -617,7 +612,6 @@ Instances = { } do
     end
 end
 
--- Custom font
 local CustomFont = { } do
     function CustomFont:New(Name, Weight, Style, Data)
         if isfile(Library.Folders.Assets .. "/" .. Name .. ".json") then
@@ -4007,12 +4001,10 @@ do
             })
 
             Items["Toggle"]:OnHover(function()
-                -- if Toggle.Value then return end 
                 Items["IndicatorOutline"]:Tween(nil, {BackgroundColor3 = Library:GetLighterColor(Library.Theme.Element, 1.35)})
             end)
             
             Items["Toggle"]:OnHoverLeave(function()
-                -- if Toggle.Value then return end 
                 Items["IndicatorOutline"]:Tween(nil, {BackgroundColor3 = Library.Theme.Element})
             end)
         end
